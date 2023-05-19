@@ -23,8 +23,8 @@ import java.util.List;
 
 @Service
 public class KeyCloakService  {
-@Autowired
-KeycklockConfig keycklockConfig;
+    @Autowired
+    KeycklockConfig keycklockConfig;
     public String addOrg(OrgDTO orgDTO) {
         Keycloak keycloak = keycklockConfig.getInstance();
         PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
@@ -55,7 +55,7 @@ KeycklockConfig keycklockConfig;
     public String addRoleToUser(String userId, String roleName) {
         Keycloak keycloak = keycklockConfig.getInstance();
         PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-        String organizationId = "3d8dcac9-bd84-4845-b90c-482341b6dffd";
+        String organizationId = "0b5c4891-bf32-4cf2-abb6-51c3892cc8ad";
 
         OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getREALM());
 
@@ -64,16 +64,16 @@ KeycklockConfig keycklockConfig;
 
         OrganizationRolesResource rolesResource = orgResource.roles();
 
-      //  String name = rolesResource.create(new OrganizationRoleRepresentation().name(roleName));
+        //  String name = rolesResource.create(new OrganizationRoleRepresentation().name(roleName));
         rolesResource.grant(roleName,userId);
 
-return roleName;
+        return roleName;
 
     }
     public String addRole(String roleName){
         Keycloak keycloak = keycklockConfig.getInstance();
         PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-        String organizationId = "e3f64273-a3ed-4251-a080-fb9343367353";
+        String organizationId = "0b5c4891-bf32-4cf2-abb6-51c3892cc8ad";
 
         OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getREALM());
 
@@ -82,9 +82,24 @@ return roleName;
 
         OrganizationRolesResource rolesResource = orgResource.roles();
 
-          String name = rolesResource.create(new OrganizationRoleRepresentation().name(roleName));
+        String name = rolesResource.create(new OrganizationRoleRepresentation().name(roleName));
         return name;
     }
+    public List<String> getAllRoles(String orgId) {
+        Keycloak keycloak = keycklockConfig.getInstance();
+        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
+        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getREALM());
+        OrganizationResource orgResource = orgsResource.organization(orgId);
+        OrganizationRolesResource rolesResource = orgResource.roles();
+        List<String> roles = new ArrayList<>();
+        List<OrganizationRoleRepresentation> roleList = rolesResource.get();
+        for (OrganizationRoleRepresentation role : roleList) {
+            roles.add(role.getName());
+        }
+        return roles;
+    }
+
+
 /*
     public List<String> getAllOrgRoles(String orgId) {
         Keycloak keycloak = keycklockConfig.getInstance();

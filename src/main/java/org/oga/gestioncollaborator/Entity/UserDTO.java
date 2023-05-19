@@ -15,6 +15,7 @@ import java.time.LocalDate;
 public class UserDTO {
     @Id
     private String id;
+    private byte[] qrCode;
     private String orgId;
     private String realm;
     private String username;
@@ -22,8 +23,10 @@ public class UserDTO {
     private String email;
     private String firstName;
     private String lastName;
+    private String numTel;
     private String role;
     private String typeContrat;
-    private Double salaire;
-    private LocalDate dateEmbauche;
+    private String salaire;
+    private String dateEmbauche;
+
 }

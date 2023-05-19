@@ -4,6 +4,7 @@ import lombok.Data;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
+import org.oga.gestioncollaborator.Entity.UserDTO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
@@ -42,7 +43,7 @@ public class KeycklockConfig {
                 .clientId(CLIENT_ID)
                 .build();
     }
-    public KeycloakBuilder newKeycloakBuilderWithPasswordCredentials(String username, String password) {
+    public KeycloakBuilder newKeycloakBuilderWithPasswordCredentials(UserDTO userDTO) {
         return KeycloakBuilder.builder()
                 .realm(REALM)
                 .serverUrl(SERVER_URL)

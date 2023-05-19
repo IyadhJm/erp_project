@@ -48,11 +48,14 @@ UserService use ;
     public ResponseEntity <List<OrganizationRepresentation>> getOrganization() {
        return new ResponseEntity<>(keycl.getOrg(),HttpStatus.OK);
     }
-
-@PostMapping("/assignRole")
+    @GetMapping("/roles/{orgId}")
+    public List<String> getAllRoles(@PathVariable("orgId") String orgId) {
+        return keycl.getAllRoles(orgId);
+    }
+/*@PostMapping("/assignRole")
     public String addRoleToUser() {
         return keycl.addRoleToUser("4a83cea7-04eb-42c7-ac5f-b45d075485cf","Manager");
-}
+}*/
     @PostMapping("/addRole/{roleName}")
     public String addRole(@PathVariable ("roleName") String roleName) {
         return keycl.addRole(roleName);
