@@ -1,0 +1,22 @@
+
+`	java:S112G"FDefine and throw a dedicated exception instead of using a generic one.(ã¥†¨şÿÿÿÿ
+H
+java:S1068"2Remove this unused "collaboraterId" private field.(–§éÃ
+Q
+java:S1068";Remove this unused "humanResourcesManagerId" private field.(…Ÿü›
+C
+java:S1068"-Remove this unused "leaveType" private field.( °õ“
+H
+java:S1068"-Remove this unused "startDate" private field.(ÿŞãõüÿÿÿÿ
+F
+java:S1068"+Remove this unused "endDate" private field.(à†Í¨ÿÿÿÿÿ
+B
+java:S1068",Remove this unused "duration" private field.(‡ä€ˆ
+@
+java:S1068"*Remove this unused "reason" private field.(¶¨é
+F
+java:S1068"0Remove this unused "leaveBalance" private field.(ïóºî
+D
+java:S1068")Remove this unused "notes" private field.(üÕ”Ñúÿÿÿÿ
+E
+java:S1068"*Remove this unused "status" private field.(¦­œ˜ÿÿÿÿÿ

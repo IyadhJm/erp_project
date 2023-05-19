@@ -1,0 +1,28 @@
+
+`	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(ã¥†¨şÿÿÿÿ
+`	java:S112["FDefine and throw a dedicated exception instead of using a generic one.(ã¥†¨şÿÿÿÿ
+b
+java:S1223Y"LRename this method to prevent any misunderstanding or make it a constructor.(¤îÑ¥
+c	java:S100Y"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¤îÑ¥
+H
+java:S1068"-Remove this unused "timeSpent" private field.(‡Ş› ÿÿÿÿÿ
+J
+java:S1068"/Remove this unused "description" private field.(ÇÓæâıÿÿÿÿ
+H
+java:S1068"-Remove this unused "startDate" private field.(ÿŞãõüÿÿÿÿ
+F
+java:S1068"+Remove this unused "endDate" private field.(à†Í¨ÿÿÿÿÿ
+C
+java:S1068 "-Remove this unused "idProject" private field.(­¥ùù
+L
+java:S1068!"1Remove this unused "idResponsible" private field.(°õÈÿşÿÿÿÿ
+G
+java:S1068""2Remove this unused "idCollaborator" private field.(ö±Î$
+F
+java:S1068#"+Remove this unused "comment" private field.(øÛ¼ùÿÿÿÿ
+F
+java:S1068$"0Remove this unused "productivity" private field.(Ù‡ˆš
+@
+java:S1068%"+Remove this unused "approve" private field.(êÙ¾1
+@
+java:S1068&"*Remove this unused "status" private field.(‘•È
