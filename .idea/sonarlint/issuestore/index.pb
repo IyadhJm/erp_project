@@ -17,7 +17,5 @@ E
 GestionBdg/Dockerfile,5/c/5c46e52ab587005a03f56f804ce3a8c1d480d2a1
 K
 FicheDePaie-main/Dockerfile,0/a/0a25d713fdf57954b477ddba26577286eda9390e
-{
-KAoi-gateway/src/main/java/com/example/apigateway/ApiGatewayApplication.java,9/a/9ab7fc62c439a47721b5c8c4a8d4747a89748c42
 ˆ
 XFicheDePaie-main/src/main/java/com/example/gfichpaie/queries/dtos/GetAllFDPQueryDTO.java,4/3/430d457ae126f6b02e347831fe42303b433b62c8

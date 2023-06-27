@@ -13,8 +13,6 @@ H
 FicheDePaie-main/pom.xml,c/8/c8abe89860d0830509ca2d1e3d727dd3d87fdf23
 B
 GestionBdg/pom.xml,9/9/99204ea38cd9e767ea79991a8465b2a2b89a8697
-{
-KAoi-gateway/src/main/java/com/example/apigateway/ApiGatewayApplication.java,9/a/9ab7fc62c439a47721b5c8c4a8d4747a89748c42
 E
 GestionBdg/Dockerfile,5/c/5c46e52ab587005a03f56f804ce3a8c1d480d2a1
 K
