@@ -11,7 +11,7 @@ pipeline {
             }
         }
          stage('Build Api-gateway ') {
-                                                    steps {
+                                               steps {
                            dir('Aoi-gateway') {
                     sh 'mvn clean compile package'
                     sh 'mvn clean verify sonar:sonar \
