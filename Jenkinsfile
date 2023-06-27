@@ -6,7 +6,7 @@ pipeline {
                 checkout([
                     $class: 'GitSCM',
                     branches: [[name: 'main']],
-                    userRemoteConfigs: [[url: 'https://github.com/IyadhJm/erp_project.git', credentialsId: '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']]
+                    userRemoteConfigs: [[url: 'https://github.com/IyadhJm/erp_project.git', credentialsId: '5e6bff41-5fe5-41aa-ab64-e80be8dde2e1']]
                 ])
             }
         }
