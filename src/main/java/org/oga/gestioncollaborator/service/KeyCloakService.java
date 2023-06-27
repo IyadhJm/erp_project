@@ -6,17 +6,12 @@ import io.phasetwo.client.OrganizationsResource;
 import io.phasetwo.client.PhaseTwo;
 import io.phasetwo.client.openapi.model.OrganizationRepresentation;
 import io.phasetwo.client.openapi.model.OrganizationRoleRepresentation;
-import io.phasetwo.client.openapi.model.UserRepresentation;
+
 import org.keycloak.admin.client.Keycloak;
-import org.keycloak.admin.client.resource.RolesResource;
-import org.keycloak.admin.client.resource.UserResource;
-import org.keycloak.admin.client.resource.UsersResource;
 import org.oga.gestioncollaborator.Entity.OrgDTO;
 import org.oga.gestioncollaborator.config.KeycklockConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,17 +22,14 @@ public class KeyCloakService  {
     KeycklockConfig keycklockConfig;
     public String addOrg(OrgDTO orgDTO) {
         Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
+        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getServerUrl());
 
         OrganizationRepresentation organizationRepresentation = new OrganizationRepresentation().name(orgDTO.getName());
+        OrganizationsResource orgs = phaseTwo.organizations(keycklockConfig.getRealm());
 
-        //organizationRepresentation.setName(orgDTO.getName());
 
-        OrganizationsResource orgs = phaseTwo.organizations(keycklockConfig.getREALM());
 
-        String orgId = orgs.create(organizationRepresentation);
-
-        return orgId;
+        return  orgs.create(organizationRepresentation);
     }
 
 
@@ -45,26 +37,23 @@ public class KeyCloakService  {
 
     public List<OrganizationRepresentation >getOrg() {
         Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-
-        List<OrganizationRepresentation> organizations = phaseTwo.organizations(keycklockConfig.REALM).get();
-
-        return  organizations;
+        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getServerUrl());
+        return   phaseTwo.organizations(keycklockConfig.realm).get();
     }
 
     public String addRoleToUser(String userId, String roleName) {
         Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-        String organizationId = "0b5c4891-bf32-4cf2-abb6-51c3892cc8ad";
+        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getServerUrl());
+        String organizationId = "35785716-6082-4f21-864c-c9eeb9e1c160";
 
-        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getREALM());
+        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getRealm());
 
         // Attribuer le rôle à l'utilisateur
         OrganizationResource orgResource = orgsResource.organization(organizationId);
 
         OrganizationRolesResource rolesResource = orgResource.roles();
 
-        //  String name = rolesResource.create(new OrganizationRoleRepresentation().name(roleName));
+
         rolesResource.grant(roleName,userId);
 
         return roleName;
@@ -72,23 +61,23 @@ public class KeyCloakService  {
     }
     public String addRole(String roleName){
         Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-        String organizationId = "0b5c4891-bf32-4cf2-abb6-51c3892cc8ad";
+        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getServerUrl());
+        String organizationId = "35785716-6082-4f21-864c-c9eeb9e1c160";
 
-        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getREALM());
+        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getRealm());
 
         // Attribuer le rôle à l'utilisateur
         OrganizationResource orgResource = orgsResource.organization(organizationId);
 
         OrganizationRolesResource rolesResource = orgResource.roles();
 
-        String name = rolesResource.create(new OrganizationRoleRepresentation().name(roleName));
-        return name;
+
+        return   rolesResource.create(new OrganizationRoleRepresentation().name(roleName));
     }
     public List<String> getAllRoles(String orgId) {
         Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getREALM());
+        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getServerUrl());
+        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getRealm());
         OrganizationResource orgResource = orgsResource.organization(orgId);
         OrganizationRolesResource rolesResource = orgResource.roles();
         List<String> roles = new ArrayList<>();
@@ -98,45 +87,4 @@ public class KeyCloakService  {
         }
         return roles;
     }
-
-
-/*
-    public List<String> getAllOrgRoles(String orgId) {
-        Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-
-        // Récupérer la ressource de l'organisation
-        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getREALM());
-        OrganizationResource orgResource = orgsResource.organization(orgId);
-
-        // Récupérer la ressource des rôles de l'organisation
-        OrganizationRolesResource rolesResource = orgResource.roles();
-
-        // Récupérer tous les rôles de l'organisation
-        List<OrganizationRoleRepresentation> roles = rolesResource.list();
-
-        // Créer une liste de noms de rôles
-        List<String> roleNames = new ArrayList<>();
-        for (OrganizationRoleRepresentation role : roles) {
-            roleNames.add(role.getName());
-        }
-
-        return roleNames;
-    }
-    */
-/*
-    public String AddRole(String roleName) {
-        Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-        String realm = keycklockConfig.getREALM();
-        String organizationId = "3d8dcac9-bd84-4845-b90c-482341b6dffd";
-
-
-        OrganizationRoleRepresentation role = new OrganizationRoleRepresentation().name(roleName);
-        Object createdRoleObj = phaseTwo.getOrganizationRolesApi().createOrganizationRole(realm, organizationId, role);
-        OrganizationRoleRepresentation createdRole = (OrganizationRoleRepresentation) createdRoleObj;
-
-    }*/
-
-
 }

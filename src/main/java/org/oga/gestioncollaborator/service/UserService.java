@@ -37,8 +37,8 @@ public class UserService {
     KeycklockConfig keycklockConfig;
     public String addUser(UserDTO userDTO) throws WriterException, IOException, com.google.zxing.WriterException {
         Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-        UsersResource usersResource = keycloak.realm(keycklockConfig.getREALM()).users();
+        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getServerUrl());
+        UsersResource usersResource = keycloak.realm(keycklockConfig.getRealm()).users();
         CredentialRepresentation pass = new CredentialRepresentation();
         pass.setType(CredentialRepresentation.PASSWORD);
         pass.setValue(userDTO.getPassword());
@@ -58,7 +58,7 @@ public class UserService {
         user.setAttributes(attributes);
         Response response = usersResource.create(user);
         String userId = CreatedResponseUtil.getCreatedId(response);
-        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getREALM());
+        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getRealm());
         String orgId = userDTO.getOrgId();
         orgsResource.organization(orgId).memberships().add(userId);
         OrganizationResource orgResource = orgsResource.organization(orgId);
@@ -74,7 +74,7 @@ public class UserService {
         MatrixToImageWriter.writeToStream(bitMatrix, "PNG", outputStream);
 
         userRepository.save(new UserDTO(userId, outputStream.toByteArray(), userDTO.getOrgId(),
-                keycklockConfig.getREALM(), userDTO.getUsername(), userDTO.getPassword(), userDTO.getEmail(),
+                keycklockConfig.getRealm(), userDTO.getUsername(), userDTO.getPassword(), userDTO.getEmail(),
                 userDTO.getFirstName(), userDTO.getLastName(), userDTO.getNumTel(), userDTO.getRole(),
                 userDTO.getTypeContrat(), userDTO.getSalaire(), new Date().toString()));
         return userId;
@@ -89,7 +89,7 @@ public class UserService {
         if (userDTO.getPassword() != null && !userDTO.getPassword().isEmpty()) {
             // Update the password in Keycloak
             Keycloak keycloak = keycklockConfig.getInstance();
-            UsersResource usersResource = keycloak.realm(keycklockConfig.getREALM()).users();
+            UsersResource usersResource = keycloak.realm(keycklockConfig.getRealm()).users();
             UserResource userResource = usersResource.get(userDTO.getId());
             CredentialRepresentation password = new CredentialRepresentation();
             password.setType(CredentialRepresentation.PASSWORD);
@@ -102,7 +102,7 @@ public class UserService {
         }
         // Update the user's other properties in Keycloak
         Keycloak keycloak = keycklockConfig.getInstance();
-        UsersResource usersResource = keycloak.realm(keycklockConfig.getREALM()).users();
+        UsersResource usersResource = keycloak.realm(keycklockConfig.getRealm()).users();
         UserResource userResource = usersResource.get(userDTO.getId());
         UserRepresentation user = userResource.toRepresentation();
         user.setEmail(userDTO.getEmail());
@@ -129,49 +129,28 @@ public class UserService {
         existUser.setTypeContrat(userDTO.getTypeContrat());
         userRepository.save(existUser);
     }
-    /* public List<io.phasetwo.client.openapi.model.UserRepresentation> getUsers(String orgId){
-         Keycloak keycloak = keycklockConfig.getInstance();
-         PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-         List<io.phasetwo.client.openapi.model.UserRepresentation> userRepresentations = phaseTwo.getOrganizationMembershipsApi().getOrganizationMemberships(keycklockConfig.REALM, orgId,1,10000).stream().toList();
-         return userRepresentations;
-     }*/
+
     public List<UserDTO> getAll() {
         return userRepository.findAll();
     }
-    /*public UserRepresentation getUserById(String userId) {
-        Keycloak keycloak = keycklockConfig.getInstance();
-        UsersResource usersResource = keycloak.realm(keycklockConfig.getREALM()).users();
-        UserResource userResource = usersResource.get(userId);
-        UserRepresentation user = userResource.toRepresentation();
-
-        // Ajouter les attributs de la liste "attributes" à la carte des attributs de l'utilisateur
-        Map<String, List<String>> attributes = user.getAttributes();
-        if (attributes != null) {
-            for (String attribute : attributes.keySet()) {
-                List<String> values = attributes.get(attribute);
-                user.getAttributes().put(attribute, values);
-            }
-        }
-
-        return user;
-    }*/
     public UserDTO getUserById(String userId) {
         return userRepository.findById(userId)
                 .orElseThrow(() -> new NoSuchElementException("User not found"));
     }
+    public UserDTO getUserByUserName(String username) {
+        return userRepository.findByUsername(username)
+                .orElseThrow(() -> new NoSuchElementException("User not found"));
+    }
     public UserResource confirmUserOrganization(String orgId , String userId){
         Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-        Response response = phaseTwo.getOrganizationMembershipsApi().checkOrganizationMembership(keycklockConfig.REALM, orgId, userId);
-        UserResource userResource = response.readEntity(UserResource.class);
-        return userResource;
+        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getServerUrl());
+        Response response = phaseTwo.getOrganizationMembershipsApi().checkOrganizationMembership(keycklockConfig.realm, orgId, userId);
+        return response.readEntity(UserResource.class);
     }
-    public void deleteUser(String userId) throws IOException, WriterException {
+    public void deleteUser(String userId) throws  WriterException {
         Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-
         // Suppression de l'utilisateur de Keycloak
-        UsersResource usersResource = keycloak.realm(keycklockConfig.getREALM()).users();
+        UsersResource usersResource = keycloak.realm(keycklockConfig.getRealm()).users();
         UserResource userResource = usersResource.get(userId);
         userResource.remove();
 

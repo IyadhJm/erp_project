@@ -4,7 +4,6 @@ import lombok.Data;
 import org.keycloak.OAuth2Constants;
 import org.keycloak.admin.client.Keycloak;
 import org.keycloak.admin.client.KeycloakBuilder;
-import org.oga.gestioncollaborator.Entity.UserDTO;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,67 +15,41 @@ public class KeycklockConfig {
 
 
     @Value("${keycloak.server-url}")
-    public  String SERVER_URL;
+    public  String serverUrl;
 
     @Value("${keycloak.realm}")
-    public  String REALM;
+    public  String realm;
 
     @Value("${keycloak.ressource}")
-    public  String CLIENT_ID;
+    public  String clientId;
 
     @Value("${keycloak.username}")
-    public  String USERNAME;
+    public  String username;
     @Value("${keycloak.password}")
-    public  String PASSWORD;
+    public  String password;
     @Value("${keycloak.secret}")
-    public  String SECRET;
+    public  String secret;
 
     public  Keycloak getInstance() {
         
         return KeycloakBuilder.builder()
-                .serverUrl(SERVER_URL)
-                .realm(REALM)
+                .serverUrl(serverUrl)
+                .realm(realm)
                 .grantType(OAuth2Constants.PASSWORD)
-                .username(USERNAME)
-                .password(PASSWORD)
-                .clientSecret(SECRET)
-                .clientId(CLIENT_ID)
+                .username(username)
+                .password(password)
+                .clientSecret(secret)
+                .clientId(clientId)
                 .build();
     }
-    public KeycloakBuilder newKeycloakBuilderWithPasswordCredentials(UserDTO userDTO) {
+    public KeycloakBuilder newKeycloakBuilderWithPasswordCredentials(String userName , String password) {
         return KeycloakBuilder.builder()
-                .realm(REALM)
-                .serverUrl(SERVER_URL)
-                .clientId(CLIENT_ID)
-                .clientSecret(SECRET)
-                .username(USERNAME)
-                .password(PASSWORD);
+                .realm(realm)
+                .serverUrl(serverUrl)
+                .clientId(clientId)
+                .clientSecret(secret)
+                .username(userName)
+                .password(password);
     }
 }
-
-
-     /*   // Initialize PhaseTwo client
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, serverUrl);
-        UserRepresentation userRepresentation = new UserRepresentation();
-        OrganizationRepresentation organization = new OrganizationRepresentation();
-        organization.setName("My Organization");
-        organization.getId();
-
-
-
-
-        String organizationId = phaseTwo.organizations(realm).create(organization);
-
-        organization.setName("Updated Organization Name");
-        phaseTwo.organizations(realm).organization(organizationId).update(organization);
-
-        List<OrganizationRepresentation> organizations = phaseTwo.organizations(realm).get();
-        for (OrganizationRepresentation org : organizations) {
-            System.out.println("Organization Name: " + org.getName());
-        }
-
-        // Delete organization
-        phaseTwo.organizations(realm).organization(organizationId).delete();
-    }
-*/
 
