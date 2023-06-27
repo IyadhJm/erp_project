@@ -1,6 +1,4 @@
 
-;
-Jenkinsfile,0/c/0c2c5c506cef0ed2d3ad2b7e45e97980b66f5520
 N
 GestionCollaborator/Dockerfile,7/e/7e936af7f720daad0b9cda9c5744e147753464ce
 K
