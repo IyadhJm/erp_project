@@ -1,7 +1,6 @@
 package com.example.gestionbdg.queries.controllers;
 
 
-import com.example.gestionbdg.queries.dtos.GetAllCJMQueryDTO;
 import com.example.gestionbdg.queries.dtos.GetCJMQueryDTO;
 import com.example.gestionbdg.queries.dtos.GetCjmTache;
 import com.example.gestionbdg.queries.entities.GestionBdjEntity;
@@ -31,8 +30,8 @@ public class GestionBdgQueryRestController {
 
     @GetMapping(path="/AllCjm")
     public List<GestionBdjEntity> getAll(){
-        List<GestionBdjEntity> reponse=queryGateway.query(new GetAllCJMQueryDTO(), ResponseTypes.multipleInstancesOf(GestionBdjEntity.class)).join();
-        return reponse;
+    return queryGateway.query(new GetAllCJMQueryDTO(), ResponseTypes.multipleInstancesOf(GestionBdjEntity.class)).join();
+
     }
 
 }

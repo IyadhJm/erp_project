@@ -4,14 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
 
 @Data @AllArgsConstructor @NoArgsConstructor
 public class GestionBdgDTO {
     private String bdgId;
-    private List<String> userName;
-    private String collaboratorId;
+    private String collaborator;
     private Double tjm;
     private Double cjm;
-    
+    private String task;
+    private double dayNumber;
+    private String project ;
+
+
 }

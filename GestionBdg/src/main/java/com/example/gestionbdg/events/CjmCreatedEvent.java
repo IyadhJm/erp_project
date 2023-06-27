@@ -4,32 +4,29 @@ package com.example.gestionbdg.events;
 import com.example.gestionbdg.enums.GbdgStatus;
 import lombok.Getter;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 public class CjmCreatedEvent extends BaseEvent <String> {
     @Getter
-    private List<String> userName;
-    @Getter
-    private String collaboratorId;
+    private String collaborator;
     @Getter  private Double tjm;
     @Getter
     private Double cjm;
+    @Getter
+    private String task;
+    @Getter
+    private double dayNumber;
+    @Getter
+    private String project ;
+
     @Getter   private GbdgStatus status;
 
-    public CjmCreatedEvent(String id, List<String> userName, String collaboratorId, Double tjm, Double cjm, GbdgStatus status) {
+    public CjmCreatedEvent(String id, String collaborator, Double tjm, Double cjm, String task, double dayNumber, String project, GbdgStatus status) {
         super(id);
-        this.userName =  userName;
-        this.collaboratorId = collaboratorId;
+        this.collaborator = collaborator;
         this.tjm = tjm;
         this.cjm = cjm;
+        this.task = task;
+        this.dayNumber = dayNumber;
+        this.project = project;
         this.status = status;
     }
-
-
-
-
-
-
 }

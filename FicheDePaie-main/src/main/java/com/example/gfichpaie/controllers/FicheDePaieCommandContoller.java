@@ -29,12 +29,25 @@ public class FicheDePaieCommandContoller {
         return ficheDePaieCommandService.createFdP(ficheDePaieRequestDTO);
     }
     @PutMapping(path = "/update")
-    public CompletableFuture<String> UpdateFDP(@RequestBody FicheDePaieRequestDTO ficheDePaieRequestDTO){
+    public CompletableFuture<String> updateFDP(@RequestBody FicheDePaieRequestDTO ficheDePaieRequestDTO){
         return ficheDePaieCommandService.updateFDP(ficheDePaieRequestDTO);
     }
+    @DeleteMapping(path = "/delete/{ficheId}")
+    public ResponseEntity<String> deleteFicheDePaie(@PathVariable String ficheId) {
+        try {
+            ficheDePaieCommandService.deleteFDP(ficheId);
+            return ResponseEntity.ok("La fiche de paie a été supprimée avec succès.");
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Une erreur s'est produite lors de la suppression de la fiche de paie.");
+        }
+    }
+
+
+
     @GetMapping("/eventStore/{FDPId}")
-    public Stream eventStore(@PathVariable String FDPId){
-        return (Stream)eventStore.readEvents(FDPId).asStream() ;
+    public Stream eventStore(@PathVariable String fdpId){
+        return eventStore.readEvents(fdpId).asStream() ;
     }
 
 }

@@ -9,5 +9,5 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel="spring")
 public interface GestionBdjMapper {
-    GestionBdgDTO GESTION_BDGToFicheDePaieDTO(GestionBdj gestionBdj);
+    GestionBdgDTO gestionBdgToFicheDePaieDTO(GestionBdj gestionBdj);
 }

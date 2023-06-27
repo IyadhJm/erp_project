@@ -1,10 +1,10 @@
-package com.example.signinPhasetwo.controller;
+package com.example.signinphasetwo.controller;
 
 
-import com.example.signinPhasetwo.Entity.OrgEntity;
-import com.example.signinPhasetwo.config.KeycklockConfig;
-import com.example.signinPhasetwo.service.KeyCloakService;
-import com.example.signinPhasetwo.service.UserService;
+import com.example.signinphasetwo.Entity.OrgEntity;
+import com.example.signinphasetwo.config.KeycklockConfig;
+import com.example.signinphasetwo.service.KeyCloakService;
+import com.example.signinphasetwo.service.UserService;
 import io.phasetwo.client.openapi.model.OrganizationRepresentation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

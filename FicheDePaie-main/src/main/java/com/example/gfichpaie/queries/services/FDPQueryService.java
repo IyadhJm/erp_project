@@ -3,8 +3,6 @@ package com.example.gfichpaie.queries.services;
 import com.example.gfichpaie.events.FicheDePaieCreatedEvent;
 import com.example.gfichpaie.events.FicheDePaieUpdatedEvent;
 import com.example.gfichpaie.mappers.FicheDePaieMapper;
-import com.example.gfichpaie.queries.dtos.GetAllFDPQueryDTO;
-import com.example.gfichpaie.queries.dtos.GetFDPQueryDTO;
 import com.example.gfichpaie.queries.entities.FDP;
 import com.example.gfichpaie.queries.repositories.FDPRepository;
 import lombok.AllArgsConstructor;
@@ -14,7 +12,7 @@ import org.axonframework.queryhandling.QueryHandler;
 import org.axonframework.queryhandling.QueryUpdateEmitter;
 import org.springframework.stereotype.Service;
 import com.example.gfichpaie.queries.dtos.GetFdpUser;
-import java.util.Date;
+
 import java.util.List;
 
 @Service
@@ -66,13 +64,9 @@ public class FDPQueryService {
 
         fdpRepository.save(fdp);
     }
-    /*
+
     @QueryHandler
-    public FDP on (GetFDPQueryDTO query) {
-        return fdpRepository.findById(query.getId()).get();
-    }*/
-    @QueryHandler
-    public FDP on (GetFdpUser query) {
+    public List<FDP> on (GetFdpUser query) {
         return fdpRepository.findByUserName(query.getUserName());
     }
 

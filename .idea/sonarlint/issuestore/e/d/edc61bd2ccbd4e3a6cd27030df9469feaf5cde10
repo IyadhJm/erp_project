@@ -1,15 +1,0 @@
-
-{
-java:S1488#"`Immediately return this expression instead of assigning it to the temporary variable "response".(Î÷„şÿÿÿÿ
-v
-java:S14886"`Immediately return this expression instead of assigning it to the temporary variable "response".(¿òÑ±
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(´äÆ¢ûÿÿÿÿ
-7
-java:S1116%"Remove this empty statement.(ôŸìúÿÿÿÿ
-Q	java:S125("<This block of commented-out lines of code should be removed.(ËôØ
-p
-java:S1128"URemove this unused import 'com.example.Erp.commonApi.queries.ProjectQueries.GetById'.(Û™ÏĞÿÿÿÿÿ
-[
-java:S1128"@Remove this unused import 'org.springframework.http.HttpStatus'.(íŸ¤Šúÿÿÿÿ
-_
-java:S1128"DRemove this unused import 'org.springframework.http.ResponseEntity'.(¶¯ø¦úÿÿÿÿ

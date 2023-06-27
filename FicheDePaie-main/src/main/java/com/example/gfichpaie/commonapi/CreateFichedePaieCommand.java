@@ -1,6 +1,6 @@
 package com.example.gfichpaie.commonapi;
 import lombok.Getter;
-import java.time.LocalDate;
+
 import java.util.Date;
 public class CreateFichedePaieCommand extends BaseCommand<String> {
     @Getter private String userName;
@@ -13,7 +13,7 @@ public class CreateFichedePaieCommand extends BaseCommand<String> {
     @Getter  private Double prime;
     @Getter  private Double tjm;
 
-    public CreateFichedePaieCommand(String id, String userName, Date date, Double salaireBrut, Double impots, String idCollaborator, Double salairenet, Double chargeSociale, Double prime, Double tjm) {
+    public CreateFichedePaieCommand(String id, String userName, Date date, Double salaireBrut, Double impots, String idCollaborator, Double chargeSociale, Double prime) {
         super(id);
         this.userName = userName;
         this.date = date;

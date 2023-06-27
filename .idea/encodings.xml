@@ -3,12 +3,22 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Aoi-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Aoi-gateway/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FicheDePaie-main/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/FicheDePaie-main/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GestionBdg/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GestionBdg/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GestionCRAsBack-master/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GestionCRAsBack-master/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GestionCollaborator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/GestionCollaborator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GestionDocumentsDemander/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GestionDocumentsDemander/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/KeycloackPahseTwo-main/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/KeycloackPahseTwo-main/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Material/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Material/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/interview/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/interview/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leave/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/leave/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/microServiceProjet (1)/src/main/java" charset="UTF-8" />
@@ -19,5 +29,6 @@
     <file url="file://$PROJECT_DIR$/rendezVous/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/server/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/test/src/main/java" charset="UTF-8" />
   </component>
 </project>

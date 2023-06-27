@@ -7,5 +7,5 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel="spring")
 public interface FicheDePaieMapper {
-    FDPResponseDTO FicheDePaieToFicheDePaieDTO(FicheDePaie ficheDePaie);
+    FDPResponseDTO ficheDePaieToFicheDePaieDTO(FicheDePaie ficheDePaie);
 }

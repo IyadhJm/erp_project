@@ -2,11 +2,11 @@ package com.example.gestionbdg.events;
 
 import lombok.Getter;
 
-public class FDPDeletedEvent {
+public class CjmDeletedEvent {
     @Getter
-    private String ficheId;
+    private String bdgId;
 
-    public FDPDeletedEvent(String ficheId) {
-        this.ficheId = ficheId;
+    public CjmDeletedEvent(String bdgId) {
+        this.bdgId = bdgId;
     }
 }

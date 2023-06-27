@@ -1,8 +1,12 @@
-package org.oga.gestioncras.commands.commonapi;
+package com.example.gfichpaie.commonapi;
 
-public class DeleteCRAsCommand extends BaseCommand<String> {
+import lombok.Getter;
 
-    public DeleteCRAsCommand(String id) {
-        super(id);
+public class DeleteFDPCommand {
+    @Getter
+    private String ficheId;
+
+    public DeleteFDPCommand(String ficheId) {
+        this.ficheId = ficheId;
     }
 }

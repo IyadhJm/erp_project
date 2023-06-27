@@ -1,8 +1,8 @@
-package com.example.signinPhasetwo.controller;
+package com.example.signinphasetwo.controller;
 
-import com.example.signinPhasetwo.Entity.UserEntity;
-import com.example.signinPhasetwo.config.KeycklockConfig;
-import com.example.signinPhasetwo.service.UserService;
+import com.example.signinphasetwo.Entity.UserEntity;
+import com.example.signinphasetwo.config.KeycklockConfig;
+import com.example.signinphasetwo.service.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;

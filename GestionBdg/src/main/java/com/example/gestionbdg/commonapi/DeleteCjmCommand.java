@@ -2,11 +2,11 @@ package com.example.gestionbdg.commonapi;
 
 import lombok.Getter;
 
-public class DeleteFDPCommand {
+public class DeleteCjmCommand {
     @Getter
-    private String ficheId;
+    private String bdgId;
 
-    public DeleteFDPCommand(String ficheId) {
-        this.ficheId = ficheId;
+    public DeleteCjmCommand(String bdgId) {
+        this.bdgId = bdgId;
     }
 }

@@ -8,4 +8,5 @@ import java.util.concurrent.CompletableFuture;
 public interface FicheDePaieCommandService {
     CompletableFuture<String> createFdP(FicheDePaieRequestDTO ficheDePaieRequestDTO);
     CompletableFuture<String> updateFDP(FicheDePaieRequestDTO ficheDePaieRequestDTO);
+    CompletableFuture<String> deleteFDP(String fdpId);
 }

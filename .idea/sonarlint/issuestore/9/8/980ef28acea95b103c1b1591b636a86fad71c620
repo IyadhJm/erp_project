@@ -1,10 +1,0 @@
-
-o	java:S116"URename this field "SERVER_URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÚ¸ãıÿÿÿÿ
-e	java:S116"PRename this field "REALM" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¡´‚ 
-n	java:S116"TRename this field "CLIENT_ID" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÿü•Îûÿÿÿÿ
-m	java:S116"SRename this field "USERNAME" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕšıÙøÿÿÿÿ
-h	java:S116"SRename this field "PASSWORD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ğ±é–
-f	java:S116 "QRename this field "SECRET" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñíà
-D
-java:S1172.".Remove this unused method parameter "userDTO".(¬¥µö
-Q	java:S125;"<This block of commented-out lines of code should be removed.(–°­±

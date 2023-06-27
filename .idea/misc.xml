@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -12,7 +13,26 @@
         <option value="$PROJECT_DIR$/GestionCRAsBack-master/pom.xml" />
         <option value="$PROJECT_DIR$/KeycloackPahseTwo-main/pom.xml" />
         <option value="$PROJECT_DIR$/microServiceProjet (1)/pom.xml" />
+        <option value="$PROJECT_DIR$/Material/pom.xml" />
+        <option value="$PROJECT_DIR$/FicheDePaie-main/pom.xml" />
+        <option value="$PROJECT_DIR$/GestionDocumentsDemander/pom.xml" />
+        <option value="$PROJECT_DIR$/GestionBdg/pom.xml" />
+        <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/test/test/pom.xml" />
+        <option value="$PROJECT_DIR$/interview/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/GestionCRAsBack-master/pom.xml" />
+        <option value="$PROJECT_DIR$/GestionDocumentsDemander/pom.xml" />
+        <option value="$PROJECT_DIR$/Material/pom.xml" />
+        <option value="$PROJECT_DIR$/interview/pom.xml" />
+        <option value="$PROJECT_DIR$/leave/pom.xml" />
+        <option value="$PROJECT_DIR$/microServiceProjet (1)/pom.xml" />
+        <option value="$PROJECT_DIR$/notification/pom.xml" />
+        <option value="$PROJECT_DIR$/rendezVous/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK" />

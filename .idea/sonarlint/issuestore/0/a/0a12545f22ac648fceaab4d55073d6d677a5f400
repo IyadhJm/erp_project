@@ -1,21 +1,0 @@
-
-s
-java:S1488&"]Immediately return this expression instead of assigning it to the temporary variable "orgId".(â¯çª
-€
-java:S14882"eImmediately return this expression instead of assigning it to the temporary variable "organizations".(Áâ­•þÿÿÿÿ
-w
-java:S1488U"\Immediately return this expression instead of assigning it to the temporary variable "name".(¢„Ûªþÿÿÿÿ
-V	java:S125""<This block of commented-out lines of code should be removed.(ó©ñÓüÿÿÿÿ
-Q	java:S125C"<This block of commented-out lines of code should be removed.(¹Á€ø
-V	java:S125h"<This block of commented-out lines of code should be removed.(ðÃßÀÿÿÿÿÿ
-R	java:S125€"<This block of commented-out lines of code should be removed.(·¦êê
-k
-java:S1128	"PRemove this unused import 'io.phasetwo.client.openapi.model.UserRepresentation'.(é®žçüÿÿÿÿ
-c
-java:S1128"MRemove this unused import 'org.keycloak.admin.client.resource.RolesResource'.(„ý¬
-g
-java:S1128"LRemove this unused import 'org.keycloak.admin.client.resource.UserResource'.(‘¼—ªÿÿÿÿÿ
-h
-java:S1128"MRemove this unused import 'org.keycloak.admin.client.resource.UsersResource'.(ñÀËøÿÿÿÿ
-Q
-java:S1128"6Remove this unused import 'javax.ws.rs.core.Response'.(ˆäÐæüÿÿÿÿ

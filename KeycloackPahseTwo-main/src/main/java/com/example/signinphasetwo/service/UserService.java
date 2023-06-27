@@ -1,6 +1,6 @@
-package com.example.signinPhasetwo.service;
-import com.example.signinPhasetwo.Entity.UserEntity;
-import com.example.signinPhasetwo.config.KeycklockConfig;
+package com.example.signinphasetwo.service;
+import com.example.signinphasetwo.Entity.UserEntity;
+import com.example.signinphasetwo.config.KeycklockConfig;
 import io.phasetwo.client.OrganizationsResource;
 import io.phasetwo.client.PhaseTwo;
 import org.keycloak.admin.client.CreatedResponseUtil;
@@ -22,8 +22,8 @@ public class UserService {
 
     public String addUser(UserEntity userEntity) {
         Keycloak keycloak = keycklockConfig.getInstance();
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-        UsersResource usersResource = keycloak.realm(keycklockConfig.getREALM()).users();
+        PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getServerUrl());
+        UsersResource usersResource = keycloak.realm(keycklockConfig.getRealm()).users();
         CredentialRepresentation pass = new CredentialRepresentation();
         pass.setType(CredentialRepresentation.PASSWORD);
         pass.setValue(userEntity.getPassword());
@@ -35,7 +35,7 @@ public class UserService {
         user.setEnabled(true);
         Response response = usersResource.create(user);
         String userId = CreatedResponseUtil.getCreatedId(response);
-        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getREALM());
+        OrganizationsResource orgsResource = phaseTwo.organizations(keycklockConfig.getRealm());
         String orgId = userEntity.getOrgId();
         orgsResource.organization(orgId).memberships().add(userId);
         return userId;

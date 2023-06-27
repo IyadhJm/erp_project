@@ -3,7 +3,6 @@ package com.example.gestionbdg.queries.services;
 import com.example.gestionbdg.events.CjmCreatedEvent;
 import com.example.gestionbdg.events.CjmUpdatedEvent;
 import com.example.gestionbdg.mappers.GestionBdjMapper;
-import com.example.gestionbdg.queries.dtos.GetAllCJMQueryDTO;
 import com.example.gestionbdg.queries.dtos.GetCJMQueryDTO;
 import com.example.gestionbdg.queries.entities.GestionBdjEntity;
 import com.example.gestionbdg.queries.repositories.GestionBdjRepository;
@@ -27,10 +26,12 @@ public class GBDJQueryService {
         log.info("FDPCreatedEventRecieved");
         GestionBdjEntity gestionBdjEntity=new GestionBdjEntity();
         gestionBdjEntity.setBdgId(cjmCreatedEvent.getId());
-        gestionBdjEntity.setUserName(cjmCreatedEvent.getUserName());
-        gestionBdjEntity.setCollaboratorId(cjmCreatedEvent.getCollaboratorId());
+        gestionBdjEntity.setCollaborator(cjmCreatedEvent.getCollaborator());
         gestionBdjEntity.setTjm(cjmCreatedEvent.getTjm());
         gestionBdjEntity.setCjm(cjmCreatedEvent.getCjm());
+        gestionBdjEntity.setTask(cjmCreatedEvent.getTask());
+        gestionBdjEntity.setDayNumber(cjmCreatedEvent.getDayNumber());
+        gestionBdjEntity.setProject(cjmCreatedEvent.getProject());
         gestionBdjEntity.setStatus(cjmCreatedEvent.getStatus());
         gestionBdjRepository.save(gestionBdjEntity);
     }
@@ -38,10 +39,12 @@ public class GBDJQueryService {
     public void on(CjmUpdatedEvent event){
         log.info("FDPUpdatedEventRecieved");
         GestionBdjEntity gestionBdjEntity=gestionBdjRepository.findById(event.getId()).get();
-        gestionBdjEntity.setUserName(event.getUserName());
-        gestionBdjEntity.setCollaboratorId(event.getCollaboratorId());
+        gestionBdjEntity.setCollaborator(event.getCollaborator());
         gestionBdjEntity.setTjm(event.getTjm());
         gestionBdjEntity.setCjm(event.getCjm());
+        gestionBdjEntity.setTask(event.getTask());
+        gestionBdjEntity.setDayNumber(event.getDayNumber());
+        gestionBdjEntity.setProject(event.getProject());
         gestionBdjEntity.setStatus(event.getStatus());
         gestionBdjRepository.save(gestionBdjEntity);
     }

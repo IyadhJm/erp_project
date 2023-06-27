@@ -1,10 +1,0 @@
-
-{
-java:S1488"`Immediately return this expression instead of assigning it to the temporary variable "response".(΅Γιόÿÿÿÿ
-t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(›“ÒÒϊÿÿÿÿ
-d
-java:S1128"IRemove this unused import 'com.example.Material.query.entities.Material'.(‘ωΨώÿÿÿÿ
-d
-java:S1128"NRemove this unused import 'com.example.Material.query.service.GetAllMaterial'.(¦ηκι
-Y
-java:S1128"CRemove this unused import 'java.util.concurrent.CompletableFuture'.(τήδ΄

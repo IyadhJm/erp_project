@@ -2,8 +2,6 @@ package com.example.gfichpaie.commonapi;
 
 import lombok.Getter;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
-
-import java.time.LocalDate;
 import java.util.Date;
 
 public class UpdateFicheDePaieCommand {
