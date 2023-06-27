@@ -21,9 +21,4 @@ public class CjmUpdatedEvent extends BaseEvent<String>{
         this.project = project;
         this.status = status;
     }
-
-
-
-
-
 }

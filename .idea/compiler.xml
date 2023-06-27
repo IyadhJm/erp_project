@@ -10,27 +10,29 @@
         <module name="server" />
         <module name="aoi-gateway" />
         <module name="test" />
-        <module name="signinPhaseTwo" />
         <module name="GestionCollaborator" />
+        <module name="signinPhaseTwo" />
       </profile>
-      <profile name="Annotation profile for GestionBdg" enabled="true">
+      <profile name="Annotation profile for GfichPaie" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.16/lombok-1.18.16.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.28/lombok-1.18.28.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.4.2.Final/mapstruct-processor-1.4.2.Final.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.4.2.Final/mapstruct-1.4.2.Final.jar" />
         </processorPath>
-        <module name="GestionBdg" />
-        <module name="GfichPaie" />
+        <module name="gfichpaie" />
+        <module name="gestionbdg" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Aoi-gateway" target="17" />
       <module name="api-gateway" target="17" />
+      <module name="GestionBdg" target="1.8" />
       <module name="GestionCRAs" target="1.8" />
       <module name="GestionDocumentsDemander" target="1.8" />
+      <module name="GfichPaie" target="1.8" />
       <module name="interview" target="1.8" />
       <module name="leave" target="1.8" />
       <module name="Material" target="17" />
@@ -51,6 +53,8 @@
       <module name="Material" options="-parameters" />
       <module name="aoi-gateway" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
+      <module name="gestionbdg" options="-parameters" />
+      <module name="gfichpaie" options="-parameters" />
       <module name="interview" options="-parameters" />
       <module name="leave" options="-parameters" />
       <module name="microServiceProjet" options="-parameters" />

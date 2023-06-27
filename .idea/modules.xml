@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GestionBdg/GestionBdg.iml" filepath="$PROJECT_DIR$/GestionBdg/GestionBdg.iml" />
       <module fileurl="file://$PROJECT_DIR$/GestionCollaborator/GestionCollaborator.iml" filepath="$PROJECT_DIR$/GestionCollaborator/GestionCollaborator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FicheDePaie-main/GfichPaie.iml" filepath="$PROJECT_DIR$/FicheDePaie-main/GfichPaie.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/erp_project.iml" filepath="$PROJECT_DIR$/.idea/erp_project.iml" />
       <module fileurl="file://$PROJECT_DIR$/server/server.iml" filepath="$PROJECT_DIR$/server/server.iml" />
       <module fileurl="file://$PROJECT_DIR$/KeycloackPahseTwo-main/signinPhaseTwo.iml" filepath="$PROJECT_DIR$/KeycloackPahseTwo-main/signinPhaseTwo.iml" />
