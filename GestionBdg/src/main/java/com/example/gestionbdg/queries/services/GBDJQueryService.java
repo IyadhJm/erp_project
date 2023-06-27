@@ -3,6 +3,7 @@ package com.example.gestionbdg.queries.services;
 import com.example.gestionbdg.events.CjmCreatedEvent;
 import com.example.gestionbdg.events.CjmUpdatedEvent;
 import com.example.gestionbdg.mappers.GestionBdjMapper;
+import com.example.gestionbdg.queries.dtos.GetAllCJMQueryDTO;
 import com.example.gestionbdg.queries.dtos.GetCJMQueryDTO;
 import com.example.gestionbdg.queries.entities.GestionBdjEntity;
 import com.example.gestionbdg.queries.repositories.GestionBdjRepository;

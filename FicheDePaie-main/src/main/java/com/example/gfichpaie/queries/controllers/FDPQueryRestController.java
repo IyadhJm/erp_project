@@ -1,5 +1,6 @@
 package com.example.gfichpaie.queries.controllers;
 
+import com.example.gfichpaie.queries.dtos.GetAllFDPQueryDTO;
 import com.example.gfichpaie.queries.dtos.GetFDPQueryDTO;
 import com.example.gfichpaie.queries.dtos.GetFdpUser;
 import com.example.gfichpaie.queries.entities.FDP;

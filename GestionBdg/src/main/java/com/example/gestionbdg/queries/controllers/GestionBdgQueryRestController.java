@@ -1,6 +1,7 @@
 package com.example.gestionbdg.queries.controllers;
 
 
+import com.example.gestionbdg.queries.dtos.GetAllCJMQueryDTO;
 import com.example.gestionbdg.queries.dtos.GetCJMQueryDTO;
 import com.example.gestionbdg.queries.dtos.GetCjmTache;
 import com.example.gestionbdg.queries.entities.GestionBdjEntity;

@@ -3,6 +3,7 @@ package com.example.gfichpaie.queries.services;
 import com.example.gfichpaie.events.FicheDePaieCreatedEvent;
 import com.example.gfichpaie.events.FicheDePaieUpdatedEvent;
 import com.example.gfichpaie.mappers.FicheDePaieMapper;
+import com.example.gfichpaie.queries.dtos.GetAllFDPQueryDTO;
 import com.example.gfichpaie.queries.entities.FDP;
 import com.example.gfichpaie.queries.repositories.FDPRepository;
 import lombok.AllArgsConstructor;
