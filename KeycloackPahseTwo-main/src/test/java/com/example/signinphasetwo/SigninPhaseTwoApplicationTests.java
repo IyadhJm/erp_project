@@ -1,4 +1,4 @@
-package com.example.signinphasetwo;
+package com.example.signinPhasetwo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

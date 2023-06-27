@@ -1,0 +1,24 @@
+
+`	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(ã¥†¨şÿÿÿÿ
+`	java:S112X"FDefine and throw a dedicated exception instead of using a generic one.(ã¥†¨şÿÿÿÿ
+h	java:S100V"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´à×ıÿÿÿÿ
+G
+java:S1068",Remove this unused "userName" private field.(Û”øÚøÿÿÿÿ
+C
+java:S1068"(Remove this unused "date" private field.(§ó®Øıÿÿÿÿ
+J
+java:S1068"/Remove this unused "salaireBrut" private field.(’ˆ†ÿÿÿÿÿ
+@
+java:S1068"*Remove this unused "impots" private field.(ŸÔ¦ö
+G
+java:S1068"2Remove this unused "idCollaborator" private field.(ö±Î$
+D
+java:S1068".Remove this unused "salaireNet" private field.(ôöÑè
+L
+java:S1068 "1Remove this unused "chargeSociale" private field.(¯…Ğªÿÿÿÿÿ
+D
+java:S1068!")Remove this unused "prime" private field.(Öà²ùÿÿÿÿ
+B
+java:S1068""'Remove this unused "tjm" private field.(áçò¢şÿÿÿÿ
+E
+java:S1068&"*Remove this unused "status" private field.(›ü¦üÿÿÿÿ

@@ -1,8 +1,8 @@
-package com.example.signinphasetwo.controller;
+package com.example.signinPhasetwo.controller;
 
-import com.example.signinphasetwo.Entity.UserEntity;
-import com.example.signinphasetwo.config.KeycklockConfig;
-import com.example.signinphasetwo.service.UserService;
+import com.example.signinPhasetwo.Entity.UserEntity;
+import com.example.signinPhasetwo.config.KeycklockConfig;
+import com.example.signinPhasetwo.service.UserService;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -19,9 +19,6 @@ import org.slf4j.Logger;
 
 import org.springframework.web.bind.annotation.*;
 import javax.ws.rs.BadRequestException;
-import java.util.HashMap;
-import java.util.Map;
-
 
 
 @CrossOrigin(origins ="*")

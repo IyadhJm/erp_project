@@ -1,6 +1,6 @@
-package com.example.signinphasetwo.config;
+package com.example.signinPhasetwo.config;
 
-import com.example.signinphasetwo.Entity.UserEntity;
+import com.example.signinPhasetwo.Entity.UserEntity;
 import lombok.Data;
 
 import org.keycloak.OAuth2Constants;
@@ -62,30 +62,3 @@ public class KeycklockConfig {
 
 
 }
-
-
-     /*   // Initialize PhaseTwo client
-        PhaseTwo phaseTwo = new PhaseTwo(keycloak, serverUrl);
-        UserRepresentation userRepresentation = new UserRepresentation();
-        OrganizationRepresentation organization = new OrganizationRepresentation();
-        organization.setName("My Organization");
-        organization.getId();
-
-
-
-
-        String organizationId = phaseTwo.organizations(realm).create(organization);
-
-        organization.setName("Updated Organization Name");
-        phaseTwo.organizations(realm).organization(organizationId).update(organization);
-
-        List<OrganizationRepresentation> organizations = phaseTwo.organizations(realm).get();
-        for (OrganizationRepresentation org : organizations) {
-            System.out.println("Organization Name: " + org.getName());
-        }
-
-        // Delete organization
-        phaseTwo.organizations(realm).organization(organizationId).delete();
-    }
-*/
-

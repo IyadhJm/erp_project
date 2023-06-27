@@ -1,0 +1,12 @@
+
+:
+java:S2629"$Invoke method(s) only conditionally.(àÀç²
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼”úÎ
+a
+java:S1858"K"getIdCollaborator" returns a string, there's no need to call "toString()".(àÀç²
+m
+java:S1858"K"getIdCollaborator" returns a string, there's no need to call "toString()".(ÿ«µ®þÿÿÿÿ8«Ï‡œƒ1
+g
+java:S1858"J"getIdResponsible" returns a string, there's no need to call "toString()".(™Œµª8´ô‡œƒ1
+z
+java:S1128"XRemove this unused import 'com.example.Erp.commonApi.event.TacheEvent.TacheTestedEvent'.(©½ê•ÿÿÿÿÿ8¶ô‡œƒ1

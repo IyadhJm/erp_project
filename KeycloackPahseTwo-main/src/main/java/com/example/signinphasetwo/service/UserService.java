@@ -1,6 +1,6 @@
-package com.example.signinphasetwo.service;
-import com.example.signinphasetwo.Entity.UserEntity;
-import com.example.signinphasetwo.config.KeycklockConfig;
+package com.example.signinPhasetwo.service;
+import com.example.signinPhasetwo.Entity.UserEntity;
+import com.example.signinPhasetwo.config.KeycklockConfig;
 import io.phasetwo.client.OrganizationsResource;
 import io.phasetwo.client.PhaseTwo;
 import org.keycloak.admin.client.CreatedResponseUtil;

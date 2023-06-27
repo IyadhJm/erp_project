@@ -1,7 +1,7 @@
-package com.example.signinphasetwo.service;
+package com.example.signinPhasetwo.service;
 
-import com.example.signinphasetwo.Entity.OrgEntity;
-import com.example.signinphasetwo.config.KeycklockConfig;
+import com.example.signinPhasetwo.Entity.OrgEntity;
+import com.example.signinPhasetwo.config.KeycklockConfig;
 import io.phasetwo.client.OrganizationsResource;
 import io.phasetwo.client.PhaseTwo;
 import io.phasetwo.client.openapi.model.OrganizationRepresentation;
@@ -19,22 +19,13 @@ KeycklockConfig keycklockConfig;
         PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
 
         OrganizationRepresentation organizationRepresentation = new OrganizationRepresentation().name(orgEntity.getName());
-
-        //organizationRepresentation.setName(orgDTO.getName());
-
         OrganizationsResource orgs = phaseTwo.organizations(keycklockConfig.getREALM());
-
-        String orgId = orgs.create(organizationRepresentation);
-
-        return orgId;
+        return orgs.create(organizationRepresentation);
     }
     public List<OrganizationRepresentation >gettOrg() {
         Keycloak keycloak = keycklockConfig.getInstance();
         PhaseTwo phaseTwo = new PhaseTwo(keycloak, keycklockConfig.getSERVER_URL());
-
-        List<OrganizationRepresentation> organizations = phaseTwo.organizations(keycklockConfig.REALM).get();
-
-        return  organizations;
+          return phaseTwo.organizations(keycklockConfig.REALM).get();
     }
 
 

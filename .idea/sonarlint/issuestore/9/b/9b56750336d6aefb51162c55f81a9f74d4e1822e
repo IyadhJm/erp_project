@@ -1,0 +1,10 @@
+
+V
+java:S4684$"@Replace this persistent entity with a simple POJO or DTO object.(Â∆Èù
+V	java:S125+"<This block of commented-out lines of code should be removed.(˛Œºµ˛ˇˇˇˇ
+V	java:S1258"<This block of commented-out lines of code should be removed.(Øâ˙ı¯ˇˇˇˇ
+V	java:S125B"<This block of commented-out lines of code should be removed.(àÙΩì˙ˇˇˇˇ
+k
+java:S1128"PRemove this unused import 'io.phasetwo.client.openapi.model.UserRepresentation'.(ÈÆûÁ¸ˇˇˇˇ
+g
+java:S1128"LRemove this unused import 'org.keycloak.admin.client.resource.UserResource'.(ëºó™ˇˇˇˇˇ

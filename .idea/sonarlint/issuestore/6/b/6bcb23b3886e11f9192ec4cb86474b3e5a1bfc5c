@@ -1,0 +1,20 @@
+
+`	java:S112$"FDefine and throw a dedicated exception instead of using a generic one.(Φ¶‚ψÿÿÿÿ
+[
+java:S4684$"@Replace this persistent entity with a simple POJO or DTO object.(Φ¶‚ψÿÿÿÿ
+‰
+java:S1130$"nRemove the declaration of thrown exception 'java.io.IOException' which is a subclass of 'java.lang.Exception'.(Φ¶‚ψÿÿÿÿ
+[
+java:S46843"@Replace this persistent entity with a simple POJO or DTO object.(°ευΨύÿÿÿÿ
+V
+java:S4684B"@Replace this persistent entity with a simple POJO or DTO object.(…ƒ€ώ
+Q	java:S125P"<This block of commented-out lines of code should be removed.(χέαƒ
+V	java:S125T"<This block of commented-out lines of code should be removed.(Ώ–Ε“ύÿÿÿÿ
+P	java:S125X"<This block of commented-out lines of code should be removed.(°γ•1
+Q	java:S125\"<This block of commented-out lines of code should be removed.(ΡƒΡ
+k
+java:S1128"PRemove this unused import 'io.phasetwo.client.openapi.model.UserRepresentation'.(ι®ηόÿÿÿÿ
+X
+java:S1128"BRemove this unused import 'io.smallrye.common.constraint.NotNull'.(ι¨µ
+g
+java:S1128"LRemove this unused import 'org.keycloak.admin.client.resource.UserResource'.(‘Ό—ªÿÿÿÿÿ

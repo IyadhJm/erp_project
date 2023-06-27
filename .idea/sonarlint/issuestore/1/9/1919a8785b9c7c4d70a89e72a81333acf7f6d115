@@ -1,0 +1,9 @@
+
+J
+java:S37403"/Provide the parametrized type for this generic.(ŸÞ¶Èþÿÿÿÿ
+k	java:S1173"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÞ¶Èþÿÿÿÿ
+k	java:S117D"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³³ÑÙøÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡¥ÉÃþÿÿÿÿ
+?
+java:S19054")Remove this unnecessary cast to "Stream".(„è¥ 
+h	java:S100D"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³³ÑÙøÿÿÿÿ

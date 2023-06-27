@@ -1,0 +1,21 @@
+
+`	java:S112C"FDefine and throw a dedicated exception instead of using a generic one.(ã¥†¨şÿÿÿÿ
+b
+java:S1223A"LRename this method to prevent any misunderstanding or make it a constructor.(—©¬
+c	java:S100A"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—©¬
+I
+java:S1068"3Remove this unused "appointmentTile" private field.(À»˜
+H
+java:S1068"-Remove this unused "startDate" private field.(ÿŞãõüÿÿÿÿ
+F
+java:S1068"+Remove this unused "endDate" private field.(à†Í¨ÿÿÿÿÿ
+G
+java:S1068",Remove this unused "location" private field.(Ìöïüÿÿÿÿ
+Q
+java:S1068";Remove this unused "humanResourcesManagerId" private field.(…Ÿü›
+H
+java:S1068"2Remove this unused "collaboraterId" private field.(–§éÃ
+D
+java:S1068")Remove this unused "notes" private field.(üÕ”Ñúÿÿÿÿ
+E
+java:S1068"*Remove this unused "status" private field.(¦­œ˜ÿÿÿÿÿ

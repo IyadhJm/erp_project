@@ -1,7 +1,8 @@
-package com.example.signinphasetwo;
+package com.example.signinPhasetwo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 @SpringBootApplication
 public class SigninPhaseTwoApplication {

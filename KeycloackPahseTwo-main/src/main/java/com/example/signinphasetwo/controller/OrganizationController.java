@@ -1,10 +1,10 @@
-package com.example.signinphasetwo.controller;
+package com.example.signinPhasetwo.controller;
 
 
-import com.example.signinphasetwo.Entity.OrgEntity;
-import com.example.signinphasetwo.config.KeycklockConfig;
-import com.example.signinphasetwo.service.KeyCloakService;
-import com.example.signinphasetwo.service.UserService;
+import com.example.signinPhasetwo.Entity.OrgEntity;
+import com.example.signinPhasetwo.config.KeycklockConfig;
+import com.example.signinPhasetwo.service.KeyCloakService;
+import com.example.signinPhasetwo.service.UserService;
 import io.phasetwo.client.openapi.model.OrganizationRepresentation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,24 +38,4 @@ UserService use ;
     public ResponseEntity <List<OrganizationRepresentation>> getOrganization() {
        return new ResponseEntity<>(keycl.gettOrg(),HttpStatus.OK);
     }
-
-    /*
-
-    @PutMapping("/{id}")
-    public ResponseEntity<Void> updateOrganization(@PathVariable("id") String id, @RequestBody OrganizationRepresentation organization) {
-        phaseTwo.organizations(keycloak.getRealm()).organization(id).update(organization);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
-
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteOrganization(@PathVariable("id") String id) {
-        phaseTwo.organizations(keycloak.getRealm()).organization(id).delete();
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
-
-    @GetMapping
-    public ResponseEntity<List<OrganizationRepresentation>> getAllOrganizations() {
-        List<OrganizationRepresentation> organizations = phaseTwo.organizations(keycloak.getRealm()).get();
-        return new ResponseEntity<>(organizations, HttpStatus.OK);
-    }*/
 }

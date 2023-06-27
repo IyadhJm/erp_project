@@ -1,0 +1,18 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Œ¡¢È
+v
+java:S1450"[Remove the "collaborator" field and declare it as a local variable in the relevant methods.(’Ü¤ûÿÿÿÿ
+o
+java:S1450"YRemove the "materialId" field and declare it as a local variable in the relevant methods.(â¬àå
+v
+java:S1450"[Remove the "materialName" field and declare it as a local variable in the relevant methods.(Ñà©Ÿùÿÿÿÿ
+r
+java:S1450"WRemove the "quantity" field and declare it as a local variable in the relevant methods.(­ŞĞòşÿÿÿÿ
+K
+java:S1068"0Remove this unused "materialName" private field.(Ñà©Ÿùÿÿÿÿ
+G
+java:S1068",Remove this unused "quantity" private field.(­ŞĞòşÿÿÿÿ
+K
+java:S1068"0Remove this unused "collaborator" private field.(’Ü¤ûÿÿÿÿ
+D
+java:S1068".Remove this unused "materialId" private field.(â¬àå

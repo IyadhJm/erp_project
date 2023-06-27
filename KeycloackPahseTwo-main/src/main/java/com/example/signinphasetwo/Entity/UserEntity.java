@@ -1,4 +1,4 @@
-package com.example.signinphasetwo.Entity;
+package com.example.signinPhasetwo.Entity;
 
 
 import lombok.AllArgsConstructor;

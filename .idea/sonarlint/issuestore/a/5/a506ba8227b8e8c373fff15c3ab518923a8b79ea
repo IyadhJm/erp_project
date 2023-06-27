@@ -1,0 +1,10 @@
+
+?
+java:S2629"$Invoke method(s) only conditionally.(»û™—ûÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(å°«¢şÿÿÿÿ
+E
+java:S3416"/Update this logger to use "TaskProducer.class".(ÒòöÎ
+x
+java:S1128"]Remove this unused import 'com.example.Erp.commonApi.event.ProjectEvent.ProjectCreatedEvent'.(³íŒ°ùÿÿÿÿ
+D
+java:S1068")Remove this unused "topic" private field.(³Ì‰ıÿÿÿÿ

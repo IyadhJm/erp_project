@@ -1,0 +1,11 @@
+
+g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(²±ÈÂÿÿÿÿÿ
+?
+java:S2629"$Invoke method(s) only conditionally.(÷Íæòøÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¼”úÎ
+f
+java:S1858"K"getCollaboraterId" returns a string, there's no need to call "toString()".(÷Íæòøÿÿÿÿ
+a
+java:S1858"K"getCollaboraterId" returns a string, there's no need to call "toString()".(÷ÖÎµ
+j
+java:S1858"T"getHumanResourcesManagerId" returns a string, there's no need to call "toString()".(á¤Àˆ

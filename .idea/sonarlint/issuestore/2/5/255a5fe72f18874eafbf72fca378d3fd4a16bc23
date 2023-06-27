@@ -1,0 +1,11 @@
+
+{
+java:S1488¦"dImmediately return this expression instead of assigning it to the temporary variable "userResource".(§ý§¤
+Q	java:S125„"<This block of commented-out lines of code should be removed.(”¯Ç
+R	java:S125"<This block of commented-out lines of code should be removed.(ÅÛƒá
+S
+java:S1854«"<Remove this useless assignment to local variable "phaseTwo".(¸»Ö
+ƒ
+java:S1130©"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(þï£
+D
+java:S1481«"-Remove this unused "phaseTwo" local variable.(¸»Ö
