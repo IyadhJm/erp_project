@@ -10,9 +10,9 @@ pipeline {
                 ])
             }
         }
-        stage('Build Api-gateway') {
-            steps {
-                dir('Api-gateway') {
+         stage('Build Api-gateway ') {
+                                                    steps {
+                                           dir('Aoi-gateway') {
                     sh 'mvn clean compile package'
                     sh 'mvn clean verify sonar:sonar \
                           -Dsonar.projectKey=apiGateway \
