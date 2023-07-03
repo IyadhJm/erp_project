@@ -38,19 +38,19 @@ pipeline {
                 }
             }
         }
-        stage('Build GestionFdp microservice') {
-            steps {
-                dir('FicheDePaie-main') {
-                    sh 'mvn clean compile package'
-                    sh 'mvn test'
-                    sh 'mvn clean verify sonar:sonar \
-                          -Dsonar.projectKey=gFdp \
-                          -Dsonar.host.url=http://localhost:9000 \
-                          -Dsonar.login=sqp_c88e8450f288ff79940525d8a75dd9e85bfb35c4'
-                }
+   stage('Build GestionFdp microservice') {
+       steps {
+           dir('FicheDePaie-main') {
+               sh 'mvn clean compile package'
+               sh 'mvn test'
+               sh 'mvn clean verify sonar:sonar \
+                     -Dsonar.projectKey=gFdp \
+                     -Dsonar.host.url=http://localhost:9000 \
+                     -Dsonar.login=sqp_c88e8450f288ff79940525d8a75dd9e85bfb35c4'
                sh 'docker build -t iyadhj/gfichpaie-1.0.0.jar .'
                sh 'docker login -u iyadhj -p ijyaamdehi'
-            }
-        }
-    }
+           }
+       }
+   }
+
 }
