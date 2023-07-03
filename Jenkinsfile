@@ -20,6 +20,7 @@ pipeline {
                           -Dsonar.login=sqp_69e3742e7d8eb31cdc276c0ad0351be6b61b1bb9'
                     sh 'docker build -t iyadhj/aoi-gateway-1.0.0.jar .'
                     sh 'docker login -u iyadhj -p ijyaamdehi'
+                    sh 'docker push iyadhj/aoi-gateway-1.0.0.jar:latest'
                 }
             }
         }
@@ -34,6 +35,8 @@ pipeline {
                           -Dsonar.login=sqp_f47171e248df23510cc9b47715f0c3020e2d5aba'
                     sh 'docker build -t iyadhj/gestionbdg-1.0.0.jar .'
                     sh 'docker login -u iyadhj -p ijyaamdehi'
+                    sh 'docker push iyadhj/gestionbdg-1.0.0.jar:latest'
+
                 }
             }
         }
@@ -48,6 +51,8 @@ pipeline {
                           -Dsonar.login=sqp_c88e8450f288ff79940525d8a75dd9e85bfb35c4'
                     sh 'docker build -t iyadhj/gfichpaie-1.0.0.jar .'
                     sh 'docker login -u iyadhj -p ijyaamdehi'
+                   sh 'docker push iyadhj/gfichpaie-1.0.0.jar:latest'
+
                 }
             }
         }
