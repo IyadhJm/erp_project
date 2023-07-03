@@ -48,7 +48,7 @@ pipeline {
                           -Dsonar.host.url=http://localhost:9000 \
                           -Dsonar.login=sqp_c88e8450f288ff79940525d8a75dd9e85bfb35c4'
                 }
-               sh 'docker build -t iyadhj/gestionbdg-1.0.0.jar .'
+               sh 'docker build -t iyadhj/gfichpaie-1.0.0.jar .'
                sh 'docker login -u iyadhj -p ijyaamdehi'
             }
         }
