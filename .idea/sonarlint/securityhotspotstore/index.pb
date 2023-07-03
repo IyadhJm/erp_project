@@ -11,9 +11,5 @@ H
 FicheDePaie-main/pom.xml,c/8/c8abe89860d0830509ca2d1e3d727dd3d87fdf23
 B
 GestionBdg/pom.xml,9/9/99204ea38cd9e767ea79991a8465b2a2b89a8697
-E
-GestionBdg/Dockerfile,5/c/5c46e52ab587005a03f56f804ce3a8c1d480d2a1
-K
-FicheDePaie-main/Dockerfile,0/a/0a25d713fdf57954b477ddba26577286eda9390e
 ˆ
 XFicheDePaie-main/src/main/java/com/example/gfichpaie/queries/dtos/GetAllFDPQueryDTO.java,4/3/430d457ae126f6b02e347831fe42303b433b62c8
