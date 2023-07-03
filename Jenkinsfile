@@ -40,7 +40,7 @@ pipeline {
         }
         stage('Build GestionFdp microservice') {
             steps {
-                dir('GestionFdp') {
+                dir('FicheDePaie-main') {
                     sh 'mvn clean compile package'
                     sh 'mvn test'
                     sh 'mvn clean verify sonar:sonar \
